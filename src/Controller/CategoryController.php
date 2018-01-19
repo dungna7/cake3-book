@@ -107,20 +107,5 @@ class CategoryController extends AppController
 
         return $this->redirect(['action' => 'index']);
     }
-    /**
-     * get bigCategory method
-     *
-     * @param string|null $id Category id.
-     * @return \Cake\Http\Response|null Redirects on successful edit, renders view otherwise.
-     * @throws \Cake\Network\Exception\NotFoundException When record not found.
-     */
-    public function bigCategory()
-    {
-        $category = $this->Category->find()->where(['parentId' => '0'])->toArray();
-        echo "<pre>";
-        var_dump($category);die;
-        $this->set(compact('category'));
-        $this->set('_serialize', ['category']);
-        $this->render('/Pages/home');
-    }
+
 }
