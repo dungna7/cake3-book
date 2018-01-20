@@ -49,7 +49,7 @@ class AppController extends Controller
 //                'action' => 'index'
 //            ],
 //            'logoutRedirect' => [
-//                'controller' => 'Pages',
+//                'controller' => 'Home',
 //                'action' => 'display',
 //                'home'
 //            ]
