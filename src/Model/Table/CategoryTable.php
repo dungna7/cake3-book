@@ -4,6 +4,7 @@ namespace App\Model\Table;
 use Cake\ORM\Query;
 use Cake\ORM\RulesChecker;
 use Cake\ORM\Table;
+use Cake\ORM\TableRegistry;
 use Cake\Validation\Validator;
 
 /**
@@ -142,10 +143,10 @@ class CategoryTable extends Table
      */
     public function getBookByType($type = null){
         $typeBook   = $this->checkBookType($type);
+        $books = TableRegistry::get('books');
         $result = array();
         if (!empty($typeBook)){
-            $result =  $this->find()
-                ->where(['parentId'=> $typeBook['id']])->toArray();
+            $result =  $books->getBookByType($typeBook['id']);
         }
         return $result;
     }

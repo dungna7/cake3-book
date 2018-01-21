@@ -39,10 +39,10 @@ class BooksController extends AppController
     {
         $memu = $this->category->getMenu();
         $books = $this->category->getBookByType($type);
-        if (!empty($books)){
-            echo "<pre>";
-            var_dump($books);die;
-        }
+//        if (!empty($books)){
+//            echo "<pre>";
+//            var_dump($books);die;
+//        }
 //        echo "<pre>";
 //        var_dump($memu);die;
         $this->set('memu',$memu);

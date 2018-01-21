@@ -2,11 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="99d82953-d98b-43a2-99b8-50385186a8c1" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/cake1.iml" afterPath="$PROJECT_DIR$/.idea/cake1.iml" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/config/routes.php" afterPath="$PROJECT_DIR$/config/routes.php" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/BooksController.php" afterPath="$PROJECT_DIR$/src/Controller/BooksController.php" />
+      <change beforePath="$PROJECT_DIR$/src/Model/Table/BooksTable.php" afterPath="$PROJECT_DIR$/src/Model/Table/BooksTable.php" />
       <change beforePath="$PROJECT_DIR$/src/Model/Table/CategoryTable.php" afterPath="$PROJECT_DIR$/src/Model/Table/CategoryTable.php" />
-      <change beforePath="$PROJECT_DIR$/src/Template/Home/home.ctp" afterPath="$PROJECT_DIR$/src/Template/Home/home.ctp" />
     </list>
     <ignored path=".idea/dataSources.local.xml" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -59,28 +57,28 @@
       <file leaf-file-name="CategoryTable.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Model/Table/CategoryTable.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="492">
-              <caret line="150" column="5" lean-forward="true" selection-start-line="137" selection-start-column="3" selection-end-line="150" selection-end-column="5" />
+            <state relative-caret-position="390">
+              <caret line="145" column="45" lean-forward="false" selection-start-line="145" selection-start-column="45" selection-end-line="145" selection-end-column="45" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="BooksTable.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="BooksTable.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Model/Table/BooksTable.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="458">
-              <caret line="68" column="33" lean-forward="true" selection-start-line="68" selection-start-column="33" selection-end-line="68" selection-end-column="33" />
+            <state relative-caret-position="555">
+              <caret line="70" column="33" lean-forward="false" selection-start-line="70" selection-start-column="20" selection-end-line="70" selection-end-column="33" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="BooksController.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="BooksController.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Controller/BooksController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="458">
-              <caret line="41" column="26" lean-forward="false" selection-start-line="41" selection-start-column="26" selection-end-line="41" selection-end-column="26" />
+            <state relative-caret-position="373">
+              <caret line="41" column="10" lean-forward="false" selection-start-line="41" selection-start-column="10" selection-end-line="44" selection-end-column="11" />
               <folding />
             </state>
           </provider>
@@ -132,9 +130,9 @@
       <list>
         <option value="$PROJECT_DIR$/src/Controller/HomeController.php" />
         <option value="$PROJECT_DIR$/config/routes.php" />
+        <option value="$PROJECT_DIR$/src/Model/Table/BooksTable.php" />
         <option value="$PROJECT_DIR$/src/Model/Table/CategoryTable.php" />
         <option value="$PROJECT_DIR$/src/Controller/BooksController.php" />
-        <option value="$PROJECT_DIR$/src/Model/Table/BooksTable.php" />
       </list>
     </option>
   </component>
@@ -351,12 +349,12 @@
       <workItem from="1513345285738" duration="846000" />
       <workItem from="1516203441896" duration="3778000" />
       <workItem from="1516415397671" duration="4278000" />
-      <workItem from="1516501326087" duration="19092000" />
+      <workItem from="1516501326087" duration="20083000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="61003000" />
+    <option name="totallyTimeSpent" value="61994000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1386" height="788" extended-state="0" />
@@ -749,26 +747,26 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Controller/BooksController.php">
+    <entry file="file://$PROJECT_DIR$/src/Model/Table/BooksTable.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="458">
-          <caret line="41" column="26" lean-forward="false" selection-start-line="41" selection-start-column="26" selection-end-line="41" selection-end-column="26" />
+        <state relative-caret-position="555">
+          <caret line="70" column="33" lean-forward="false" selection-start-line="70" selection-start-column="20" selection-end-line="70" selection-end-column="33" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Model/Table/CategoryTable.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="492">
-          <caret line="150" column="5" lean-forward="true" selection-start-line="137" selection-start-column="3" selection-end-line="150" selection-end-column="5" />
+        <state relative-caret-position="390">
+          <caret line="145" column="45" lean-forward="false" selection-start-line="145" selection-start-column="45" selection-end-line="145" selection-end-column="45" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Model/Table/BooksTable.php">
+    <entry file="file://$PROJECT_DIR$/src/Controller/BooksController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="458">
-          <caret line="68" column="33" lean-forward="true" selection-start-line="68" selection-start-column="33" selection-end-line="68" selection-end-column="33" />
+        <state relative-caret-position="373">
+          <caret line="41" column="10" lean-forward="false" selection-start-line="41" selection-start-column="10" selection-end-line="44" selection-end-column="11" />
           <folding />
         </state>
       </provider>

@@ -1,4 +1,5 @@
 <?php
+
 namespace App\Model\Table;
 
 use Cake\ORM\Query;
@@ -61,18 +62,16 @@ class BooksTable extends Table
 
         return $validator;
     }
+
     /**
      * get Book By Type method
      * input BookType
      * return array
      */
-    public function getBookByType($type = null){
-        $typeBook   = $this->checkBookType($type);
-        $result = array();
-        if (!empty($typeBook)){
-            $result =  $this->find()
-                ->where(['parentId'=> $typeBook['id']])->toArray();
-        }
+    public function getBookByType($type = null)
+    {
+        $result = $this->find()
+            ->where(['categoryId' => $type])->toArray();
         return $result;
     }
 }
