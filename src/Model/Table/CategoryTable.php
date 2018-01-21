@@ -70,7 +70,7 @@ class CategoryTable extends Table
      * get bigCategory method
      *
      * @param array $config The configuration for the Table.
-     * @return void
+     * @return array
      */
     public function getBigCategory()
     {
@@ -82,6 +82,7 @@ class CategoryTable extends Table
             $returnResult[$key]['name'] = $val['name'];
             $returnResult[$key]['level'] = $val['level'];
             $returnResult[$key]['parentId'] = $val['parentId'];
+            $returnResult[$key]['alias'] = $val['alias'];
         }
         return $returnResult;
     }
@@ -89,7 +90,7 @@ class CategoryTable extends Table
      * get bigCategory method
      *
      * @param array $config The configuration for the Table.
-     * @return void
+     * @return array
      */
     public function getMediumCategory()
     {
@@ -101,6 +102,7 @@ class CategoryTable extends Table
             $returnResult[$key]['name'] = $val['name'];
             $returnResult[$key]['level'] = $val['level'];
             $returnResult[$key]['parentId'] = $val['parentId'];
+            $returnResult[$key]['alias'] = $val['alias'];
         }
         return $returnResult;
     }
@@ -121,5 +123,30 @@ class CategoryTable extends Table
             }
         }
         return $bigCategory;
+    }
+    /**
+     * check BookType method
+     * input BookType
+     * return array
+     */
+    public function checkBookType($type = null){
+        $result =  $this->find()
+            ->where(['alias'=> $type]) ->first();;
+        return $result;
+    }
+
+    /**
+     * get Book By Type method
+     * input BookType
+     * return array
+     */
+    public function getBookByType($type = null){
+        $typeBook   = $this->checkBookType($type);
+        $result = array();
+        if (!empty($typeBook)){
+            $result =  $this->find()
+                ->where(['parentId'=> $typeBook['id']])->toArray();
+        }
+        return $result;
     }
 }

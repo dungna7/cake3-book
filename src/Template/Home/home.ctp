@@ -76,18 +76,18 @@ $cakeDescription = 'CakePHP: the rapid development PHP framework';
                     <?php foreach ($memu as $item): ?>
                     <?php if (isset($item['subCategory'])): ?>
                         <li class="nav-item dropdown">
-                            <a class="nav-link text-white dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
+                            <a class="nav-link text-white dropdown-toggle"  id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
                                 aria-expanded="false"><?= $item['name']?>
                             </a>
                             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                             <?php foreach ($item['subCategory'] as $subItem): ?>
-                                <a class="dropdown-item" href="#"><?= $subItem['name']?></a>
+                                <a class="dropdown-item" href="/<?= $item['alias']?>/<?= $subItem['alias']?>"><?= $subItem['name']?></a>
                             <?php endforeach; ?>
                             </div>
                         </li>
                     <?php else: ?>    
                     <li class="nav-item">
-                        <a class="nav-link text-white" href="#"><?= $item['name']?></a>
+                        <a class="nav-link text-white" href="/<?= $item['alias']?>"><?= $item['name']?></a>
                     </li>
                     <?php endif; ?>
                     <?php endforeach; ?>
