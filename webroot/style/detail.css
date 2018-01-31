@@ -36,9 +36,9 @@
         display: none;
     }
 }
-.card {
+/* .card {
     margin-bottom: 15px !important;
-}
+} */
 footer{
     height: 80px;
     background: #3661b7;
@@ -55,7 +55,7 @@ footer{
     z-index: 1; /* Stay on top */
     top: 40; /* Stay at the top */
     left: 0;
-    background-color: #375557f2; /* Black*/
+    background-color: #5557f2; /* Black*/
     overflow-x: auto; /* Disable horizontal scroll */
     padding-top: 60px; /* Place content 60px from the top */
     transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */

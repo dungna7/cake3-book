@@ -32,7 +32,7 @@ $cakeDescription = 'CakePHP: the rapid development PHP framework';
 <html lang="en">
 
 <head>
-    <title>detail</title>
+    <title>List</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -123,7 +123,7 @@ $cakeDescription = 'CakePHP: the rapid development PHP framework';
                 <div class="aside mini-logo">
                     <aside class="sidebar">
                         <div class="">
-                            <img src="images/minano1.jpg" alt="CakePHP Tutorial" draggable="true" data-bukket-ext-bukket-draggable="true">
+                            <img src="/images/minano1.jpg" alt="CakePHP Tutorial" draggable="true" data-bukket-ext-bukket-draggable="true">
                         </div>
                         <ul class="nav nav-list primary left-menu" id="sidebar">
                             <li>
@@ -185,73 +185,77 @@ $cakeDescription = 'CakePHP: the rapid development PHP framework';
                     </aside>
                 </div>
             </div>
-            <div class="col-lg-7 col-sm-12 content px-0">
-                <div class="container-fluid advertisements"></div>
-                <div class="container-fluid paging">
-                    <hr class="my-1">
-                    <div class="float-left">
-                        <ul class="pagination">
-                            <li class="page-item">
-                                <a class="page-link" href="" onclick="history.back()" aria-label="Previous">
-                                    <span aria-hidden="true">«</span>
-                                    <span class="sr-only">Previous</span>
-                                    Previous Page
-                                </a>
+            <div class="col-lg-7 col-sm-12 content pr-0">
+                <div class="container-fluid advertisements pl-0"></div>
+                <div class="container-fluid row">
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item">
+                                <a href="#">Home</a>
                             </li>
-                        </ul>
-                    </div>
-                    <div class="float-right">
-                        <ul class="pagination">
-                            <li class="page-item">
-                                <a class="page-link" href="#" aria-label="Next">
-                                    Next Page
-                                    <span aria-hidden="true">»</span>
-                                    <span class="sr-only">Next</span>
-                                </a>
+                            <li class="breadcrumb-item">
+                                <a href="#">Library</a>
                             </li>
-                        </ul>
+                            <li class="breadcrumb-item active" aria-current="page">Data</li>
+                        </ol>
+
+                    </nav>
+                    <div class="dropdown my-auto" id="aside-dropdown">
+                        <a class="exspan-icon" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <i class="fa fa-plus-circle text-info" aria-hidden="true"></i>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuLink">
+                            <a class="dropdown-item" href="#">Action</a>
+                            <a class="dropdown-item" href="#">Another action</a>
+                            <a class="dropdown-item" href="#">Something else here</a>
+                        </div>
                     </div>
+
+                </div>
+                <hr class="my-2">
+                <div class="container-fluid row pr-0 mr-0">
+                   <?php foreach ($books as $item): ?>
+                    <div class="col-sm-6 col-md-4">
+                        <img class="card-img-top mt-2" src="/images/minano2.jpg" alt="Card image cap">
+                        <div class="card-body ">
+                            <h5 class="card-title"><?= $item['name'] ?></h5>
+                            <p class="card-text"><?=  (str_word_count($item['summaryContent']) > 13) ? substr($item['summaryContent'],0,strpos($item['summaryContent'],explode(" ", $item['summaryContent'])[15])).'...' : $item['summaryContent']; ?></p>
+                        </div>
+                        <div class="card-footer text-center py-0">
+                            <button type="button" onclick="location.href='<?php if (!empty($item['alias'])): ?><?= $type ?>/<?= $item['alias']?><?php endif; ?>'" class="btn btn-outline-danger border-0">Detail view</button> 
+                        </div>
+                    </div>
+                    <?php endforeach; ?>
                 </div>
                 <div class="container-fluid">
-                    <h1 class="col-12 text-center">CakePHP Tutorial</h1>
-                    <p>CakePHP is an open-source framework for PHP. It is intended to make developing, deploying and maintaining
-                        applications much easier. CakePHP is based on an MVC-like architecture that is both powerful and
-                        easy to grasp. Models, Views, and Controllers guarantee a strict but natural separation of business
-                        logic from data and presentation layers.
-                    </p>
-                    <h1>Audience</h1>
-                    <p>This tutorial is meant for web developers and students who would like to learn how to develop websites
-                        using CakePHP. It will provide a good understanding of how to use this framework.</p>
-                    <h1>Prerequisites</h1>
-                    <p>Before you proceed with this tutorial, we assume that you have knowledge of HTML, Core PHP, and Advance
-                        PHP. We have used CakePHP version 3.2.7 in all the examples.</p>
-                </div>
-                <div class="container-fluid paging">
-                    <hr class="my-1">
-                    <div class="float-left">
-                        <ul class="pagination my-0">
+                    <hr>
+                    <nav aria-label="Page navigation example">
+                        <ul class="pagination justify-content-center">
                             <li class="page-item">
-                                <a class="page-link" href="" onclick="history.back()" aria-label="Previous">
+                                <a class="page-link" href="#" aria-label="Previous">
                                     <span aria-hidden="true">«</span>
                                     <span class="sr-only">Previous</span>
-                                    Previous Page
                                 </a>
                             </li>
-                        </ul>
-                    </div>
-                    <div class="float-right">
-                        <ul class="pagination my-0">
+                            <li class="page-item">
+                                <a class="page-link" href="#">1</a>
+                            </li>
+                            <li class="page-item">
+                                <a class="page-link" href="#">2</a>
+                            </li>
+                            <li class="page-item">
+                                <a class="page-link" href="#">3</a>
+                            </li>
                             <li class="page-item">
                                 <a class="page-link" href="#" aria-label="Next">
-                                    Next Page
                                     <span aria-hidden="true">»</span>
                                     <span class="sr-only">Next</span>
                                 </a>
                             </li>
                         </ul>
-                    </div>
+                    </nav>
                 </div>
-                <div class="container-fluid advertisements"></div>
+                <div class="container-fluid advertisements pl-0"></div>
             </div>
             <div class="col-lg-3 col-sm-12 "></div>
         </div>
@@ -260,7 +264,7 @@ $cakeDescription = 'CakePHP: the rapid development PHP framework';
         <div class="footer col-lg-9 row">
             <div class="col-2 h-100 d-inline-block">
                 <a href="index.htm" class="logo">
-                    <img alt="Tutorials Point" class="mh-100 img-responsive" src="images/logo-footer.png" draggable="true" data-bukket-ext-bukket-draggable="true"> </a>
+                    <img alt="Tutorials Point" class="mh-100 img-responsive" src="/images/logo-footer.png" draggable="true" data-bukket-ext-bukket-draggable="true"> </a>
             </div>
             <div class="col-10">
                 <div class="w-100 h-50">
@@ -287,7 +291,7 @@ $cakeDescription = 'CakePHP: the rapid development PHP framework';
         </div>
     </footer>
     <script src="/js/jquery-3.1.1.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js"></script>
+    <script src="/js/popper.min.js"></script>
     <script src="/js/bootstrap.min.js"></script>
 </body>
 

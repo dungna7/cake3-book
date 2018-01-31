@@ -50,9 +50,10 @@ Router::scope('/', function (RouteBuilder $routes) {
      * to use (in this case, src/Template/Home/home.ctp)...
      */
     $routes->connect('/', ['controller' => 'Home', 'action' => 'index']);
-    $routes->connect('/books', ['controller' => 'books', 'action' => 'index']);
     $routes->connect('admin/books/add', ['controller' => 'books', 'action' => 'add']);
+    $routes->connect('/books', ['controller' => 'books', 'action' => 'index']);
     $routes->connect('/books/:type', ['controller' => 'books', 'action' => 'getBookByType'])->setPass(['type']);
+    $routes->connect('/books/:type/:bookName', ['controller' => 'books', 'action' => 'view'])->setPass(['bookName']);
     /**
      * ...and connect the rest of 'Home' controller's URLs.
      */

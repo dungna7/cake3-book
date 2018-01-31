@@ -68,4 +68,16 @@ class BookcontentsTable extends Table
         return $validator;
     }
 
+    /**
+     * get Book content method
+     * input BookType
+     * return object
+     */
+    public function getBookContent($bookName = null)
+    {
+        $result = $this->find()
+            ->where(['bookName' => $bookName])->toArray();
+        return $result;
+    }
+
 }

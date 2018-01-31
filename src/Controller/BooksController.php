@@ -11,9 +11,12 @@ use Cake\ORM\TableRegistry;
 class BooksController extends AppController
 {
     private $category;
+    private $book;
+//    public $paginate ;
     public function initialize()
     {
         parent::initialize();
+        $this->loadComponent('Paginator');
         $this->category = TableRegistry::get('Category');
     }
     /**
@@ -27,7 +30,7 @@ class BooksController extends AppController
 //        echo "<pre>";
 //        var_dump($memu);die;
         $this->set('memu',$memu);
-        return $this->render('/Home/home');
+        return $this->render('/Book/home');
     }
 
     /**
@@ -39,14 +42,16 @@ class BooksController extends AppController
     {
         $memu = $this->category->getMenu();
         $books = $this->category->getBookByType($type);
-//        if (!empty($books)){
-//            echo "<pre>";
-//            var_dump($books);die;
-//        }
-//        echo "<pre>";
-//        var_dump($memu);die;
+        $this->paginate = [
+            'limit' => 5,
+        ];
+        if (!empty($books)){
+
+        }
+        $this->set('books', $this->paginate(null,$books));
+        $this->set('type',$type);
         $this->set('memu',$memu);
-        return $this->render('/Home/home');
+        return $this->render('/Book/home');
     }
     /**
      * View method
@@ -55,14 +60,15 @@ class BooksController extends AppController
      * @return \Cake\Http\Response|void
      * @throws \Cake\Datasource\Exception\RecordNotFoundException When record not found.
      */
-    public function view($id = null)
+    public function view($bookName = null)
     {
-        $book = $this->Books->get($id, [
-            'contain' => []
-        ]);
+        $memu = $this->category->getMenu();
+        $this->set('memu',$memu);
+        $this->book = TableRegistry::get('bookcontents');
+        $a = $this->book->getBookContent($bookName);
+        var_dump($a);die;
 
-        $this->set('book', $book);
-        $this->set('_serialize', ['book']);
+        return $this->render('/Bookcontents/view');
     }
 
     /**
