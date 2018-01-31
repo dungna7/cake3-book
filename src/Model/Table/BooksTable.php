@@ -74,6 +74,8 @@ class BooksTable extends Table
             ->where(['categoryId' => $type])->toArray();
         return $result;
     }
+
+
 }
 
 
